@@ -7,6 +7,8 @@ dotenv.config()
 const getImageCaption = async (message) => {
   try {
 
+    console.log("KEY ==> ",  process.env.GPT_KEY)
+
     const openai = new OpenAIApi(new Configuration({
       apiKey: process.env.GPT_KEY
     }))
